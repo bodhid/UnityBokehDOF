@@ -20,6 +20,7 @@ namespace BodhiDonselaar
 			if (bokehSampleMat == null) bokehSampleMat = new Material(Resources.Load<Shader>("BokehSample"));
 			if (bokehFinalMat == null) bokehFinalMat = new Material(Resources.Load<Shader>("BokehFinal"));
 			if (cam == null) cam = GetComponent<Camera>();
+			cam.depthTextureMode = DepthTextureMode.Depth;
 		}
 		void OnRenderImage(RenderTexture src, RenderTexture des)
 		{
